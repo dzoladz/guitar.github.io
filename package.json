@@ -1,5 +1,5 @@
 {
-  "name": "astro-blog",
+  "name": "guitar.github.io",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -12,7 +12,15 @@
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
+    "@iconify-json/simple-icons": "^1.2.68",
+    "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.16",
-    "sharp": "^0.34.3"
+    "daisyui": "^5.5.14",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.18",
+    "unplugin-icons": "^23.0.1"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.2.10"
   }
 }
