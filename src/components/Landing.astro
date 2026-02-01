@@ -1,18 +1,25 @@
 ---
-import MdiFileDocument from '~icons/mdi/file-document'
 import MdiGithub from '~icons/mdi/github'
-import MdiDoor from '~icons/mdi/door'
+import MdiDoorClosed from '~icons/mdi/door-closed'
+import MdiDoorOpen from '~icons/mdi/door-open'
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 ---
 
 <div class="hero bg-solo-slate min-h-screen font-solo-monospace">
 	<div class="hero-content text-center">
 		<div class="text-solo-silver">
-			<div class="text-6xl font-bold uppercase ">Guitar Solo™</div>
-			<div class="text-4xl py-1">Audio Laboratory of Derek C Zoladz</div>
-			<div class="flex justify-center my-2">
-				<div class="border rounded-full p-2 m-1"><MdiFileDocument /></div>
-				<div class="border rounded-full p-2 m-1"><MdiGithub /></div>
-				<div class="border rounded-full p-2 m-1"><MdiDoor /></div>
+			<div class="text-6xl font-bold uppercase ">{ SITE_TITLE }</div>
+			<div class="text-4xl py-1">{ SITE_DESCRIPTION }</div>
+			<div class="landing-icons flex justify-center my-2">
+				<a class="landing-front-door" href="/blog">
+					<div class="border rounded-full p-2 m-1">
+						<MdiDoorClosed class="front-door-closed"/>
+						<MdiDoorOpen class="front-door-open"/>
+					</div>
+				</a>
+				<a class="landing-github">
+					<div class="border rounded-full p-2 m-1"><MdiGithub /></div>
+				</a>
 			</div>
 		</div>
 	</div>

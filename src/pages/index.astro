@@ -1,20 +1,17 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import Head from '../components/Head.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Landing from '../components/Landing.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
-import "../../src/assets/app.css";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<!-- <Header /> -->
 		<Landing />
-		<!-- <Footer /> -->
 	</body>
 </html>
