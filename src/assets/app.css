@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+    /* --color-*	Color utilities like bg-red-500, text-sky-300, and many more
+    // --font-*	Font family utilities like font-sans
+     --text-*	Font size utilities like text-xl */
+    /* COLORS */
+    --color-solo-cream: oklch(94.86% 0.016 79.35);
+    --color-solo-slate: oklch(0.4 0.07 241.41 / 1);
+    --color-solo-silver: oklch(0.59 0 0 / 1);
+    --color-solo-espresso: oklch(31.57% 0.018 45.84);
+    --color-solo-godin: oklch(0.3 0.11 32.26 / 1);
+    --color-solo-white: oklch(0.94 0.01 0 / 1);
+    --color-solo-charcoal: oklch(0.26 0 0 / 1);
+    --color-solo-wall: oklch(0.81 0.02 103.09 / 1);
+    --color-solo-wall2: oklch(0.79 0.01 95.01 / 1);
+    --color-solo-wood: oklch(0.3 0.01 0 / 1);
+    /* FONTS */
+    --font-solo-monospace: ui-monospace;
+
+}

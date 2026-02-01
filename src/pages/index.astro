@@ -2,40 +2,19 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Landing from '../components/Landing.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
-import "../../src/assets/main.css";
+import "../../src/assets/app.css";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-		#particles-js {
-          background: #1a222c;
-          display: flex;
-          vertical-align: bottom;
-          width: 100%;
-          min-height: 100vh;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-attachment: fixed;
-          .particles-js-canvas-el {
-            width:100% !important;
-            height:100vh !important;
-          }
-        }
-		</style>
 	</head>
 	<body>
 		<!-- <Header /> -->
-            <div id="particles-js" style="display: flex; justify-content: center; align-items: center;">
-				<div>
-					<div style="color: white; display: flex; justify-content: center; align-items: center;" class="text-7xl">{SITE_TITLE}</div>
-					<div style="color: white; display: flex; justify-content: center; align-items: center;" class="text-3xl">Audio Laboratory of {SITE_AUTHOR}</div>
-				</div>
-
-			</div>
-		<Footer />
+		<Landing />
+		<!-- <Footer /> -->
 	</body>
 </html>
