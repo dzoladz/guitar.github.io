@@ -1,24 +1,17 @@
 ---
 import MdiGithub from '~icons/mdi/github'
-import MdiDoorClosed from '~icons/mdi/door-closed'
-import MdiDoorOpen from '~icons/mdi/door-open'
+import MdiLocationEnter from '~icons/mdi/location-enter'
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 ---
 
-<div class="hero bg-solo-slate min-h-screen font-solo-monospace">
+<div class="hero bg-solo-royal min-h-screen" style="font-family: 'Playfair Display', serif;">
 	<div class="hero-content text-center">
 		<div class="text-solo-silver">
-			<div class="text-6xl font-bold uppercase ">{ SITE_TITLE }</div>
+			<div class="text-6xl font-bold uppercase landing-title">{ SITE_TITLE }</div>
 			<div class="text-4xl py-1">{ SITE_DESCRIPTION }</div>
-			<div class="landing-icons flex justify-center my-2">
+			<div class="landing-icons flex justify-center my-4">
 				<a class="landing-front-door" href="/blog">
-					<div class="border rounded-full p-2 m-1">
-						<MdiDoorClosed class="front-door-closed"/>
-						<MdiDoorOpen class="front-door-open"/>
-					</div>
-				</a>
-				<a class="landing-github">
-					<div class="border rounded-full p-2 m-1"><MdiGithub /></div>
+					<div class="text-3xl"><MdiLocationEnter /></div>
 				</a>
 			</div>
 		</div>
