@@ -1,9 +1,12 @@
 ---
 import MdiCalendarMonthOutline from '~icons/mdi/calendar-month-outline'
+import { format } from "date-fns";
 const { title, url, date, description } = Astro.props
+const d = new Date(date)
+const formatted_date = format(d, 'MMMM do, yyyy');
 ---
 <div class="mb-2">
     <h1><a href={url} class="text-2xl text-solo-tangerine">{title}</a></h1>
-    <div class="flex items-center me-2"><MdiCalendarMonthOutline /> {date}</div>
-    <div>{description}</div>
+    <div class="flex items-center text-solo-aluminum"><MdiCalendarMonthOutline class="me-1" /> {formatted_date}</div>
+    <div class="text-solo-aluminum">{description}</div>
 </div>
