@@ -20,6 +20,9 @@
 	/* TESTING */
 	--color-solo-royal: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 
+	/* */
+	--color-solo-lightsilver: oklch(0.93 0 0 / 1);
+
 	/* IN USE */
 	--color-solo-silver: oklch(0.59 0 0 / 1);
 	--color-solo-aluminum: oklch(0.77 0.01 244.41 / 1);
@@ -27,8 +30,16 @@
 	--color-solo-magenta: oklch(0.61 0.31 327.95 / 1);
 	/* FONTS */
 	--font-solo-monospace: ui-monospace;
-
 }
+
+.font-hyperlegible {
+	font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+.font-playfair {
+	font-family: 'Playfair Display', serif;
+}
+
 
 /*
 LANDING
