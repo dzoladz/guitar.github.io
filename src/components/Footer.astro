@@ -1,6 +1,19 @@
 ---
-import { SITE_AUTHOR } from '../consts';
+import {SITE_AUTHOR, SITE_TITLE} from '../consts';
 const today = new Date();
 import SimpleIconsGithub from '~icons/simple-icons/github';
-import MdiCopyleft from '~icons/mdi/copyleft'
+import MdiCreativeCommons from '~icons/mdi/creative-commons'
+import MdiRss from '~icons/mdi/rss'
 ---
+
+<footer>
+    <div class="w-3/5 mx-auto flex justify-between p-4 border-t">
+        <div class="flex items-center justify-center text-thin">
+            Copyright <MdiCreativeCommons class="ms-1 me-1"/> {today.getFullYear()}
+        </div>
+        <div class="flex items-center justify-center">
+            <a href="#"><SimpleIconsGithub class="ms-1 me-1" /></a>
+            <a href="#"><MdiRss class="ms-1 me-1" /></a>
+        </div>
+    </div>
+</footer>

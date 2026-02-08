@@ -3,16 +3,12 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<div class="w-3/5 mx-auto flex">
-		<div class="me-2">
-			<nav>
-				<a href="/">{SITE_TITLE}</a>
-			</nav>
+	<div class="w-3/5 mx-auto flex justify-between p-4 border-b">
+		<div class="flex items-center justify-center">
+			<a href="/">{SITE_TITLE}</a>
 		</div>
-		<div>
-			<nav>
-				<a href="/blog">Blog</a>
-			</nav>
+		<div class="flex items-center justify-center">
+			<a href="/blog">Blog</a>
 		</div>
 	</div>
 </header>
