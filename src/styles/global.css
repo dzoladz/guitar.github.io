@@ -18,15 +18,30 @@
 	--color-solo-wood: oklch(0.3 0.01 0 / 1);
 
 	/* TESTING */
-	--color-solo-royal: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+	/* --color-solo-royal: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+	 */
 
+	/* TEXT */
+	--color-solo-text: #eaedf3; /* light blue lazer */
+
+	/* NEW - READL COLOR */
+	--color-solo-cream: #ffebd2;  /* cream */
+	--color-solo-creamsicle: #ffa363; /* orange creamsicle */
+	--color-solo-tangerine: #fc7644; /* tangerine */
+	--color-solo-leather: #af4f41; /* leather */
+	--color-solo-royal: #1d2536; /* blue */
+
+	--color-solo-silver: oklch(0.53 0 0 / 1);
 	/* */
 	--color-solo-lightsilver: oklch(0.93 0 0 / 1);
 
-	/* IN USE */
-	--color-solo-silver: oklch(0.59 0 0 / 1);
-	--color-solo-aluminum: oklch(0.77 0.01 244.41 / 1);
-	--color-solo-tangerine: oklch(0.65 0.18 56.3 / 1);
+	/* IN USE
+	oklch(0.45 0 0 / 1);  -- darker silver
+	oklch(0.67 0 0 / 1);  -- sliver lighter
+	*/
+	/* --color-solo-silver: oklch(0.59 0 0 / 1); */
+	/* --color-solo-aluminum: oklch(0.77 0.01 244.41 / 1); */
+	/* --color-solo-tangerine: oklch(0.65 0.18 56.3 / 1); */
 	--color-solo-magenta: oklch(0.61 0.31 327.95 / 1);
 	/* FONTS */
 	--font-solo-monospace: ui-monospace;
@@ -46,7 +61,7 @@ LANDING
 */
 
 .landing-title {
-	background-image: linear-gradient(-180deg, oklch(0.47 0 0 / 1), oklch(0.77 0.01 244.41 / 1));
+	background-image: linear-gradient(-180deg, oklch(0.59 0 0 / 1), oklch(0.89 0.01 0 / 1));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-background-clip: text;
@@ -56,6 +71,7 @@ LANDING
 .landing-icons a:hover {color: var(--color-solo-tangerine); transition: color 0.25s;}
 
 .landing-front-door {
+	transform: translateX(-0.1em);
 	.front-door-closed {display: block;}
 	.front-door-open {display: none;}
 }
