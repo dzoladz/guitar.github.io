@@ -1,0 +1,25 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BlogPost from "../../components/BlogPost.astro";
+const allPosts = Object.values(
+    import.meta.glob("../inspiration/*.md", { eager: true })
+);
+---
+<Base>
+    <Header />
+    <div class="w-3/5 mx-auto pt-4 pb-4 text-4xl text-solo-aluminum">Inspiration Over the Years</div>
+    <div class="w-3/5 mx-auto">
+        {
+            allPosts.map((post:any) =>
+                <BlogPost
+                    url={post.url}
+                    date={post.frontmatter.pubdate}
+                    description={post.frontmatter.description}
+                    title={post.frontmatter.title} />
+            )
+        }
+    </div>
+    <Footer />
+</Base>

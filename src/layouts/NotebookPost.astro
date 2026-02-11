@@ -1,0 +1,31 @@
+---
+import Base from "./Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MdiCalendarMonthOutline from '~icons/mdi/calendar-month-outline'
+import { format } from "date-fns";
+const { frontmatter } = Astro.props;
+const d = new Date(frontmatter.pubdate)
+const formatted_date = format(d, 'MMMM do, yyyy');
+---
+
+<Base>
+    <Header />
+    <div class="w-3/5 mx-auto font-hyperlegible">
+        <div class="text-4xl text-solo-tangerine pt-4">{frontmatter.title}</div>
+        <div class="flex items-center pb-2 text-solo-aluminum"><MdiCalendarMonthOutline class="me-1" /> {formatted_date}</div>
+        <div class="tags flex pt-2 pb-2 text-solo-aluminum">
+            {
+                frontmatter.tags.map((tag: string) => (
+                    <div class="tag me-2">
+                        <a href={`/notebooks/${tag}`}>#{tag}</a>
+                    </div>
+                ))
+            }
+        </div>
+        <div class="font-hyperlegible text-lg pb-2">
+            <slot />
+        </div>
+    </div>
+    <Footer />
+</Base>

@@ -1,19 +1,19 @@
 ---
-import Base from "../layouts/Base.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import BlogPost from "../components/BlogPost.astro";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import NotebookPost from "../../components/NotebookPost.astro";
 const allPosts = Object.values(
-    import.meta.glob("./posts/*.md", { eager: true })
+    import.meta.glob("../notebooks/*.md", { eager: true })
 );
 ---
 <Base>
     <Header />
-    <div class="w-3/5 mx-auto pt-4 pb-4 text-4xl text-solo-aluminum">Posts</div>
+    <div class="w-3/5 mx-auto pt-4 pb-4 text-4xl text-solo-aluminum">All Notes</div>
     <div class="w-3/5 mx-auto">
         {
             allPosts.map((post:any) =>
-                <BlogPost
+                <NotebookPost
                     url={post.url}
                     date={post.frontmatter.pubdate}
                     description={post.frontmatter.description}
